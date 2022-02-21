@@ -1,0 +1,488 @@
+fileFormatVersion: 2
+guid: 34e0d497fa582d24cbd6765a9a8f3fea
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Cecilants_switch_wireframe-1_Switch_0
+  - first:
+      213: 21300002
+    second: Cecilants_switch_wireframe-1_Switch_1
+  - first:
+      213: 21300004
+    second: Cecilants_switch_wireframe-1_Switch_2
+  - first:
+      213: 21300006
+    second: Cecilants_switch_wireframe-1_Switch_3
+  - first:
+      213: 21300008
+    second: Cecilants_switch_wireframe-1_Switch_4
+  - first:
+      213: 21300010
+    second: Cecilants_switch_wireframe-1_Switch_5
+  - first:
+      213: 21300012
+    second: Cecilants_switch_wireframe-1_Switch_6
+  - first:
+      213: 21300014
+    second: Cecilants_switch_wireframe-1_Switch_7
+  - first:
+      213: 21300016
+    second: Cecilants_switch_wireframe-1_Switch_8
+  - first:
+      213: 21300018
+    second: Cecilants_switch_wireframe-1_Switch_9
+  - first:
+      213: 21300020
+    second: Cecilants_switch_wireframe-1_Switch_10
+  - first:
+      213: 21300022
+    second: Cecilants_switch_wireframe-1_Switch_11
+  - first:
+      213: 21300024
+    second: Cecilants_switch_wireframe-1_Switch_12
+  - first:
+      213: 21300026
+    second: Cecilants_switch_wireframe-1_Switch_13
+  - first:
+      213: 21300028
+    second: Cecilants_switch_wireframe-1_Switch_14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cecilants_switch_wireframe-1_Switch_0
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1125
+        width: 437
+        height: 433
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c233f9b9ca7b74e8d4126ee1dad754
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cecilants_switch_wireframe-1_Switch_1
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 1125
+        width: 437
+        height: 433
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a657ca6be4fbd2468173207e54afa2d
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cecilants_switch_wireframe-1_Switch_2
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 1125
+        width: 437
+        height: 433
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767e48be4a5c55e4e90ceda834d6b850
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cecilants_switch_wireframe-1_Switch_3
+      rect:
+        serializedVersion: 2
+        x: 1705
+        y: 1125
+        width: 435
+        height: 433
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b7893b0f64be9e4f946a32f7ba1dd10
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cecilants_switch_wireframe-1_Switch_4
+      rect:
+        serializedVersion: 2
+        x: 2353
+        y: 1112
+        width: 379
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5071cee403dbd5e4d825cee981c8eb14
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cecilants_switch_wireframe-1_Switch_5
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 641
+        width: 616
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 059b2b2fe60e29e47831cd5df2b85c60
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cecilants_switch_wireframe-1_Switch_6
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 641
+        width: 617
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a28813ac7224384eb4b5c815542ee9b
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cecilants_switch_wireframe-1_Switch_7
+      rect:
+        serializedVersion: 2
+        x: 1705
+        y: 629
+        width: 435
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb12c25ec2a7f8e4fbb363bc2661aef2
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cecilants_switch_wireframe-1_Switch_8
+      rect:
+        serializedVersion: 2
+        x: 2378
+        y: 731
+        width: 530
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a7083447f26ad4291ab896a4dca4d4
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cecilants_switch_wireframe-1_Switch_9
+      rect:
+        serializedVersion: 2
+        x: 2933
+        y: 731
+        width: 529
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb715bd3f9be6a408cb85666cdd6ca2
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cecilants_switch_wireframe-1_Switch_10
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 160
+        width: 616
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5e29c36807c3a4480d3d5458ad4b8f
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cecilants_switch_wireframe-1_Switch_11
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 159
+        width: 622
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777f0e83a9858484b82c437e24feb960
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cecilants_switch_wireframe-1_Switch_12
+      rect:
+        serializedVersion: 2
+        x: 1705
+        y: 136
+        width: 435
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edfd8e3b0584a79498dddd3a7c7adad6
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cecilants_switch_wireframe-1_Switch_13
+      rect:
+        serializedVersion: 2
+        x: 2377
+        y: 319
+        width: 531
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c03ba99548e78924d94678e8f7353f77
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cecilants_switch_wireframe-1_Switch_14
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 318
+        width: 532
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1fc5f6327c84448be937d94b15a916
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5056994be15d49440b4a2dfad37d8588
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
