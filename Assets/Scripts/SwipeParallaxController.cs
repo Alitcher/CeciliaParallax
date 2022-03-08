@@ -1,50 +1,38 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SwipeParallaxController : MonoBehaviour
 {
     #region Inspector Variables
-
-    [SerializeField] float minSwipeLength = 0.25f;
-    [SerializeField] float maxSwipeLength; // TODO: define the max length users can swipe on android
-
-    [Tooltip("Whether to detect eight or four cardinal directions")]
-    [SerializeField] bool useEightDirections = false;
-
-    #endregion
-    private const float eightDirAngle = 0.906f;
-    private const float fourDirAngle = 0.5f;
-
-    private const float scrollSensitivity = 10f;
-    private float currentSpeed;
-    private float mouseDelta;
-
-    [SerializeField] [Range(0.01f, 0.25f)] private float fullSpeed;
+    [SerializeField] [Range(10000, 30000f)] private float maxMouseDeltaPc;
+    [SerializeField] [Range(0.001f, 0.1f)] private float fullSpeed;
     [SerializeField] [Range(1, 50f)] private float decelerationRate;
     [SerializeField] [Range(0, 2f)] private float[] layersScrollSpeed;
     [SerializeField] private Transform[] environmentLayer;
+    #endregion
 
-    private const float _leftBoundary = -25f;
-    private const float _rightBoundary = 25f;
-
-    // Swipe layers speed values 
-
-    private Dictionary<Swipe, Vector2> cardinalDirections = new Dictionary<Swipe, Vector2>()
-    {
-        { Swipe.Right,         Vector2.right           },
-        { Swipe.Left,         Vector2.left             },
-    };
+    private const float minSwipeLength = 0.01f;
+    private const float scrollSensitivity = 10f;
+    private const float _leftBoundary = -45f;
+    private const float _rightBoundary = 45f;
 
     private Swipe swipeDirection;
-    private Vector2 firstPressPos;
-    private Vector2 secondPressPos;
-    private Vector2 currentSwipe => secondPressPos - firstPressPos;
+    private Vector2 fingerDownPos;
+    private Vector2 fingerUpPos;
+    private Vector2 fingerHoldPos;
+
+    private float holdTime;
+    private float currentSpeed;
+
     private void Start()
     {
 #if !UNITY_EDITOR
         fullSpeed *= 4f;
 #endif
+    }
+
+    private float getDynamicDeceleration()
+    {
+        return (currentMouseDelta / maxMouseDeltaPc) * decelerationRate;
     }
 
     private void Update()
@@ -54,25 +42,18 @@ public class SwipeParallaxController : MonoBehaviour
         AssertStopScrolling();
     }
 
-    /// <summary>
-    /// Attempts to detect the current swipe direction.
-    /// Should be called over multiple frames in an Update-like loop.
-    /// </summary>
     private void DetectSwipe()
     {
         if (GetMouseInput())
         {
             currentSpeed = fullSpeed;
-
-
-            if (mouseDelta < minSwipeLength)
+            if (currentMouseDelta < minSwipeLength)
             {
                 // Swipe was not long enough, abort
                 ResetScrollSpeed();
                 return;
             }
-
-            swipeDirection = GetSwipeDirByTouch(currentSwipe);
+            swipeDirection = GetSwipeDirByTouch();
         }
     }
 
@@ -95,7 +76,6 @@ public class SwipeParallaxController : MonoBehaviour
     private void ResetScrollSpeed()
     {
         currentSpeed = 0;
-        mouseDelta = 0;
         swipeDirection = Swipe.None;
     }
 
@@ -130,56 +110,44 @@ public class SwipeParallaxController : MonoBehaviour
         }
     }
 
-    public void AddSpeed(float speedSwipe)
-    {
-        currentSpeed = speedSwipe;
-    }
-
     private bool IsSwipingRight() => IsSwipingDirection(Swipe.Right);
     private bool IsSwipingLeft() => IsSwipingDirection(Swipe.Left);
 
-    #region Helper Functions
-
-#if CHEAT_BUILD
-#endif
     private bool GetMouseInput()
     {
         if (Input.GetMouseButtonDown(0))  // Swipe/Click started
         {
-            firstPressPos = (Vector2)Input.mousePosition;
-            if (!Vector2.Equals((Vector2)Input.mousePosition, secondPressPos))
-            {
-                mouseDelta = firstPressPos.magnitude * decelerationRate;
-            }
+            holdTime = 0;
+            fingerDownPos = (Vector2)Input.mousePosition;
             return true;
         }
         else if (Input.GetMouseButton(0)) // Swipe/Drag
         {
-            secondPressPos = (Vector2)Input.mousePosition;
-            mouseDelta = (secondPressPos - firstPressPos).magnitude * decelerationRate;
+            holdTime += Time.deltaTime;
+            fingerHoldPos = (Vector2)Input.mousePosition;
             return true;
         }
         else
         {
-            secondPressPos = (Vector2)Input.mousePosition;
+            fingerUpPos = (Vector2)Input.mousePosition;
             return false;
         }
     }
 
-    private bool IsDirection(Vector2 direction, Vector2 cardinalDirection)
+    private bool IsDirection()
     {
-        float angle = useEightDirections ? eightDirAngle : fourDirAngle;
-        return Vector2.Dot(direction, cardinalDirection) > angle;
+        return (fingerHoldPos.x < fingerDownPos.x) ? true : false;
     }
 
-    private Swipe GetSwipeDirByTouch(Vector2 currentSwipe)
+    private Swipe GetSwipeDirByTouch()
     {
-        currentSwipe.Normalize();
-        KeyValuePair<Swipe, Vector2> swipeDir = cardinalDirections.FirstOrDefault(dir => IsDirection(currentSwipe, dir.Value));
-        return swipeDir.Key;
+        return IsDirection() ? Swipe.Left : Swipe.Right;
     }
 
     private bool IsSwipingDirection(Swipe swipeDir) => swipeDirection == swipeDir;
+    private Vector2 currentSwipe => fingerHoldPos - fingerDownPos;
+    private float currentMouseDelta => (holdTime == 0) ? 0 : (fingerHoldPos - fingerDownPos).magnitude / holdTime;
+    private float mouseDeltaBase => (fingerHoldPos - fingerDownPos).magnitude * getDynamicDeceleration();
 
     private enum Swipe
     {
@@ -187,7 +155,6 @@ public class SwipeParallaxController : MonoBehaviour
         Left,
         Right,
     };
-    #endregion
 }
 
 
