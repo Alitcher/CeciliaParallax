@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Cecilia.Parallax;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,7 +23,7 @@ public class LowerBar_Holder : MonoBehaviour
         {
             if (m_GameWorldParallax.transform.position.y < m_Controller.offsetWorldPos)
             {
-                m_GameWorldParallax.transform.position = new Vector3(m_Controller.GameWorld.transform.position.x, m_Controller.GameWorld.transform.position.y + 1f, m_Controller.GameWorld.transform.position.z);
+                m_GameWorldParallax.transform.position = new Vector3(m_Controller.GameWorld.transform.position.x, m_Controller.GameWorld.transform.position.y + 0.25f, m_Controller.GameWorld.transform.position.z);
             }
             //else
             //    isUp = false;
@@ -31,7 +32,7 @@ public class LowerBar_Holder : MonoBehaviour
         {
             if (m_Controller.GameWorld.transform.position.y > m_Controller.defaultWorldPos)
             {
-                m_Controller.GameWorld.transform.position = new Vector3(m_Controller.GameWorld.transform.position.x, m_Controller.GameWorld.transform.position.y - 1f, m_Controller.GameWorld.transform.position.z);
+                m_Controller.GameWorld.transform.position = new Vector3(m_Controller.GameWorld.transform.position.x, m_Controller.GameWorld.transform.position.y - 0.25f, m_Controller.GameWorld.transform.position.z);
             }
 
         }
